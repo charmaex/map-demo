@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 class Addresses {
     static let inst = Addresses()
@@ -24,5 +25,8 @@ class Addresses {
         _addresses.append("Unter den Linden 77, 10117 Berlin")
         _addresses.append("Rothenbaumchaussee 10, 20148 Hamburg")
         _addresses.append("Promenadepl. 2-6, 80333 München")
+        
+        GeoCoder.inst.getAnnotationForAddresses(_addresses)
     }
+    
 }

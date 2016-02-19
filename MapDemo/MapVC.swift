@@ -22,6 +22,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         map.delegate = self
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "newAnnotations:", name: "newAnnotations", object: nil)
+        
         Addresses.inst.getAddresses()
     }
 
@@ -37,6 +39,22 @@ class ViewController: UIViewController, MKMapViewDelegate {
         centerMap(onLocation: loc)
     }
 
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !annotation.isKindOfClass(MKUserLocation) else {
+            return nil
+        }
+        
+        if annotation.isKindOfClass(HotelAnnotations) {
+            let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "Default")
+            annotationView.pinTintColor = UIColor.blueColor()
+            annotationView.animatesDrop = true
+            
+            return annotationView
+        }
+        
+        return nil
+    }
+    
     func locationAuthStatus() {
         
         let status = CLLocationManager.authorizationStatus()
@@ -56,6 +74,12 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(loc.coordinate, regionRadius, regionRadius)
         
         map.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func newAnnotations(notif: AnyObject) {
+        for annotation in GeoCoder.inst.annotations {
+            map.addAnnotation(annotation)
+        }
     }
 
 }
