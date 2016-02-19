@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		135CDBE51C76223F00DCDFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CDBE41C76223F00DCDFEE /* AppDelegate.swift */; };
-		135CDBE71C76223F00DCDFEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CDBE61C76223F00DCDFEE /* ViewController.swift */; };
+		135CDBE71C76223F00DCDFEE /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CDBE61C76223F00DCDFEE /* MapVC.swift */; };
 		135CDBEA1C76223F00DCDFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135CDBE81C76223F00DCDFEE /* Main.storyboard */; };
 		135CDBEC1C76223F00DCDFEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 135CDBEB1C76223F00DCDFEE /* Assets.xcassets */; };
 		135CDBEF1C76223F00DCDFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135CDBED1C76223F00DCDFEE /* LaunchScreen.storyboard */; };
+		13B887AF1C77817900DF92AC /* Adresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B887AE1C77817900DF92AC /* Adresses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		135CDBE11C76223F00DCDFEE /* MapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		135CDBE41C76223F00DCDFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		135CDBE61C76223F00DCDFEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		135CDBE61C76223F00DCDFEE /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		135CDBE91C76223F00DCDFEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		135CDBEB1C76223F00DCDFEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		135CDBEE1C76223F00DCDFEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		135CDBF01C76223F00DCDFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B887AE1C77817900DF92AC /* Adresses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adresses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		135CDBE31C76223F00DCDFEE /* MapDemo */ = {
 			isa = PBXGroup;
 			children = (
+				13B887AD1C7780B100DF92AC /* Services */,
+				13B887AC1C7780A700DF92AC /* View */,
+				13B887AB1C7780A000DF92AC /* Controller */,
 				135CDBE41C76223F00DCDFEE /* AppDelegate.swift */,
-				135CDBE61C76223F00DCDFEE /* ViewController.swift */,
-				135CDBE81C76223F00DCDFEE /* Main.storyboard */,
 				135CDBEB1C76223F00DCDFEE /* Assets.xcassets */,
-				135CDBED1C76223F00DCDFEE /* LaunchScreen.storyboard */,
 				135CDBF01C76223F00DCDFEE /* Info.plist */,
 			);
 			path = MapDemo;
+			sourceTree = "<group>";
+		};
+		13B887AB1C7780A000DF92AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				135CDBE61C76223F00DCDFEE /* MapVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		13B887AC1C7780A700DF92AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				135CDBE81C76223F00DCDFEE /* Main.storyboard */,
+				135CDBED1C76223F00DCDFEE /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		13B887AD1C7780B100DF92AC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				13B887AE1C77817900DF92AC /* Adresses.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				135CDBE71C76223F00DCDFEE /* ViewController.swift in Sources */,
+				13B887AF1C77817900DF92AC /* Adresses.swift in Sources */,
+				135CDBE71C76223F00DCDFEE /* MapVC.swift in Sources */,
 				135CDBE51C76223F00DCDFEE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +315,7 @@
 				135CDBF51C76223F00DCDFEE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
