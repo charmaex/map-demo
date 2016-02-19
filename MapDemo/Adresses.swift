@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import MapKit
 
 class Addresses {
     static let inst = Addresses()
