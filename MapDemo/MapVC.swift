@@ -63,6 +63,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         case .AuthorizedWhenInUse, .AuthorizedAlways:
             map.showsUserLocation = true
         case .NotDetermined:
+            locationManager.requestWhenInUseAuthorization()
             locationAuthStatus()
         default:
             break
