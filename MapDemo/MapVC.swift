@@ -22,7 +22,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         map.delegate = self
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "newAnnotations:", name: "newAnnotations", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.newAnnotations(_:)), name: "newAnnotations", object: nil)
         
         Addresses.inst.getAddresses()
     }

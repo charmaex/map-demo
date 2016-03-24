@@ -60,10 +60,10 @@
 		135CDBE31C76223F00DCDFEE /* MapDemo */ = {
 			isa = PBXGroup;
 			children = (
-				13B887AD1C7780B100DF92AC /* Services */,
 				13B887B21C77958900DF92AC /* Controller */,
 				13B887AC1C7780A700DF92AC /* View */,
 				13B887AB1C7780A000DF92AC /* Controller */,
+				13B887AD1C7780B100DF92AC /* Services */,
 				135CDBE41C76223F00DCDFEE /* AppDelegate.swift */,
 				135CDBEB1C76223F00DCDFEE /* Assets.xcassets */,
 				135CDBF01C76223F00DCDFEE /* Info.plist */,
