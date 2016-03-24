@@ -28,6 +28,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
 
     override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
         locationAuthStatus()
     }
     
